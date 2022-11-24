@@ -73,6 +73,16 @@ function Header() {
           >
             Contact
           </Link>
+          <Link
+            href="/appointments"
+            className={`${
+              router.pathname === "/appointments"
+                ? "text-white bg-black"
+                : "text-gray-300"
+            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          >
+            Appointments
+          </Link>
         </div>
         <Footer />
       </nav>

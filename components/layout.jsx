@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "./header";
+import Main from "./main";
 
 function Layout({ children }) {
   return (
@@ -8,8 +9,8 @@ function Layout({ children }) {
         <title>{"RC WEB - Randy Caballero"}</title>
       </Head>
       <div className="h-screen flex">
-        <Header></Header>
-
+        <Header />
+        <Main />
         {children}
       </div>
     </>

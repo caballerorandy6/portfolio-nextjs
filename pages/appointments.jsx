@@ -1,12 +1,11 @@
 import Layout from "../components/layout";
 
-function Component() {
+function Appointments() {
   return (
     <Layout>
-      <h1>About</h1>
-      h1
+      <h1>Appointments</h1>
     </Layout>
   );
 }
 
-export default Component;
+export default Appointments;
