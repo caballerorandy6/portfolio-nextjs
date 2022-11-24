@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import Footer from "../pages/footer";
+import Footer from "./footer";
 import TypewriterReact from "./typewriter";
 
 function Header() {

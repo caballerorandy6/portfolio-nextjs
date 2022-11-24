@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <p className=" text-white text-center text-xs font-semibold">
-        © 2019 All rights reserved.
+        {`© ${new Date().getFullYear()}  All rights reserved.`}
       </p>
     </>
   );
