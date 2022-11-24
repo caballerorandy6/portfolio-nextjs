@@ -4,7 +4,6 @@ function Component() {
   return (
     <Layout>
       <h1>About</h1>
-      h1
     </Layout>
   );
 }
