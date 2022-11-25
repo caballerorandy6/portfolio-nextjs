@@ -2,17 +2,18 @@ import Head from "next/head";
 import Header from "./header";
 import MainContent from "./main-content";
 
-function Layout({ children }) {
+function Layout({ children, title, description }) {
   return (
     <div>
       <Head>
-        <title>{"RC WEB - Randy Caballero"}</title>
+        <title>{`RC WEB - ${title}`}</title>
+        <meta name="description" content={description} />
       </Head>
-      <div className="h-screen flex">
+      <body className="h-screen flex">
         <Header></Header>
         <MainContent></MainContent>
         {children}
-      </div>
+      </body>
     </div>
   );
 }

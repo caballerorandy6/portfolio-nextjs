@@ -1,14 +1,15 @@
 import Layout from "../components/layout";
-import Typewriter from "typewriter-effect";
-import Image from "next/image";
+import Image from "next/legacy/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import Typewriter from "typewriter-effect";
 
 function Index() {
   const router = useRouter();
-  console.log(router);
+  //console.log(router);
 
   return (
-    <Layout>
+    <Layout title={"Home"} description={"Randy Caballero, Portfolio"}>
       <div className="flex flex-col place-content-center mx-auto">
         <p className="text-white text-opacity-40 text-7xl">
           {"Hello, I'm Randy Caballero"}
@@ -39,6 +40,25 @@ function Index() {
               loop: true,
             }}
           />
+        </div>
+        <div className="flex flex-col">
+          <label className="text-slate-400 text-center font-semibold uppercase text-sm mt-10">
+            Download my resume
+          </label>
+          <Link
+            target="_blank"
+            href="randycaballero.pdf"
+            download="randycaballero.pdf"
+            className="text-center p-2"
+          >
+            <Image
+              className=""
+              src="/img/download.png"
+              width={25}
+              height={25}
+              alt="download image"
+            />
+          </Link>
         </div>
       </div>
     </Layout>

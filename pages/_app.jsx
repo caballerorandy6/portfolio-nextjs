@@ -1,18 +1,24 @@
+import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [readyPage, setReadyPage] = useState(false);
 
-  return (
+  useEffect(() => {
+    setReadyPage(true);
+  }, []);
+
+  return readyPage ? (
     <AnimatePresence exitBeforeEnter>
       <motion.div
         key={router.route}
         initial="initialState"
         animate="animateState"
         exit="exitState"
-        transition={{ duration: 0.75 }}
+        transition={{ duration: 0.5 }}
         variants={{
           initialState: {
             opacity: 0,
@@ -29,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>
-  );
+  ) : null;
 }
 
 export default MyApp;
