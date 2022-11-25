@@ -3,6 +3,7 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import Footer from "./footer";
 import TypewriterReact from "./typewriter";
+import { motion } from "framer-motion";
 
 function Header() {
   const router = useRouter();
@@ -16,73 +17,114 @@ function Header() {
             <Image
               className="rounded-full"
               src="/img/logo.png"
-              width={135}
-              height={135}
+              width={100}
+              height={100}
               alt="logo image"
             />
           </Link>
-
           <TypewriterReact />
         </div>
+
         <div className="flex flex-col w-full items-end">
-          <Link
-            href="/"
+          <div
             className={`${
-              router.pathname === "/" ? "text-white bg-black" : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+              router.pathname === "/" ? "text-white bg-black" : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            Home
-          </Link>
-          <Link
-            href="/about"
+            <Image
+              src="/icons/home.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/">Home</Link>
+          </div>
+
+          <div
             className={`${
               router.pathname === "/about"
                 ? "text-white bg-black"
-                : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+                : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            About Me
-          </Link>
-          <Link
-            href="/resume"
+            <Image
+              src="/icons/about.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/about">About</Link>
+          </div>
+
+          <div
             className={`${
               router.pathname === "/resume"
                 ? "text-white bg-black"
-                : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+                : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            Resume
-          </Link>
-          <Link
-            href="/portfolio"
+            <Image
+              src="/icons/resume.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/resume">Resume</Link>
+          </div>
+
+          <div
             className={`${
               router.pathname === "/portfolio"
                 ? "text-white bg-black"
-                : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+                : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            Portfolio
-          </Link>
-          <Link
-            href="/contact"
+            <Image
+              src="/icons/portfolio.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/portfolio">Portfolio</Link>
+          </div>
+
+          <div
             className={`${
               router.pathname === "/contact"
                 ? "text-white bg-black"
-                : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+                : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            Contact
-          </Link>
-          <Link
-            href="/appointments"
+            <Image
+              src="/icons/contact.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/contact">Contact</Link>
+          </div>
+
+          <div
             className={`${
               router.pathname === "/appointments"
                 ? "text-white bg-black"
-                : "text-gray-300"
-            } w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+                : "text-slate-400"
+            } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
           >
-            Appointments
-          </Link>
+            <Image
+              src="/icons/appointments.png"
+              width={20}
+              height={20}
+              alt="home image"
+              priority
+            />
+            <Link href="/appointments">Appointments</Link>
+          </div>
         </div>
         <Footer />
       </nav>

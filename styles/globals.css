@@ -5,3 +5,22 @@
 .text-gold {
   color: #cbb26a;
 }
+
+.bg-img {
+  background-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0.8),
+    rgb(0 0 0 / 0.7)
+  );
+}
+
+.hover-gold:hover {
+  color: #cbb26a;
+}
+
+.page-animation {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  opacity: 0;
+}

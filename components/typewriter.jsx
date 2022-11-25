@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 function TypewriterReact() {
   return (
-    <h1 className="text-white text-md font-semibold uppercase p-4 mb-4">
+    <h1 className="text-white text-xl font-semibold uppercase p-2 mb-4">
       Randy Caballero
       <span className="text-gold normal-case text-sm text-center">
         <Typewriter

@@ -2,12 +2,13 @@ import Image from "next/legacy/image";
 
 function MainContent() {
   return (
-    <div className="w-10/12">
+    <div className="fixed -z-10 w-full  h-full bg-img">
       <Image
-        src="/img/background.webp"
-        width={500}
-        height={500}
-        alt="background image"
+        className="w-full h-full object-cover absolute mix-blend-overlay"
+        src="/img/background.JPG"
+        alt="backgrund img"
+        layout="fill"
+        priority
       />
     </div>
   );
