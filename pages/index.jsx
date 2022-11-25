@@ -40,39 +40,6 @@ function Index() {
             }}
           />
         </div>
-        <div className="flex text-center mt-14 ">
-          <button
-            onClick={() => {
-              router.push("/contact");
-            }}
-            className="flex w-3/12 justify-center gap-2 mx-auto border-2 p-3 text-sm bg-gray-800 text-slate-400 font-bold rounded-full border-none shadow-md hover:bg-black hover-gold active:bg-gray-800 transition-colors "
-            type="button"
-          >
-            <Image
-              src="/icons/contact.png"
-              width={20}
-              height={20}
-              alt="contact img"
-            />
-            Contact Me
-          </button>
-
-          <button
-            onClick={() => {
-              router.push("/resume");
-            }}
-            className="flex w-3/12 justify-center gap-2 mx-auto border-2 p-3  text-sm bg-gray-800 text-slate-400 font-bold rounded-full border-none shadow-md hover:bg-black hover-gold active:bg-gray-800 transition-colors"
-            type="button"
-          >
-            <Image
-              src="/icons/resume.png"
-              width={20}
-              height={20}
-              alt="contact img"
-            />
-            My Resume
-          </button>
-        </div>
       </div>
     </Layout>
   );

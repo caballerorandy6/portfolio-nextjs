@@ -126,6 +126,7 @@ function Header() {
             <Link href="/appointments">Appointments</Link>
           </div>
         </div>
+
         <Footer />
       </nav>
     </>
