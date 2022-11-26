@@ -2,8 +2,11 @@ import Layout from "../components/layout";
 
 function Portfolio() {
   return (
-    <Layout>
-      <h1>Portfolio</h1>
+    <Layout
+      title={"About"}
+      description={"RC - Web, Randy Caballero, Portfolio, Portfolio"}
+    >
+      <div>Portfolio</div>
     </Layout>
   );
 }

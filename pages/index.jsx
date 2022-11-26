@@ -9,8 +9,11 @@ function Index() {
   //console.log(router);
 
   return (
-    <Layout title={"Home"} description={"Randy Caballero, Portfolio"}>
-      <div className="flex flex-col place-content-center mx-auto">
+    <Layout
+      title={"Home"}
+      description={"RC - Web, Randy Caballero, Portfolio, Home"}
+    >
+      <div className="flex flex-col place-content-center text-center mx-auto">
         <p className="text-white text-opacity-40 text-7xl">
           {"Hello, I'm Randy Caballero"}
         </p>
@@ -52,11 +55,11 @@ function Index() {
             className="text-center p-2"
           >
             <Image
-              className=""
               src="/img/download.png"
               width={25}
               height={25}
               alt="download image"
+              priority
             />
           </Link>
         </div>

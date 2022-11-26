@@ -9,11 +9,11 @@ function Layout({ children, title, description }) {
         <title>{`RC WEB - ${title}`}</title>
         <meta name="description" content={description} />
       </Head>
-      <body className="h-screen flex">
+      <div className="h-screen flex">
         <Header></Header>
         <MainContent></MainContent>
         {children}
-      </body>
+      </div>
     </div>
   );
 }

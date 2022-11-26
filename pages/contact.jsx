@@ -2,8 +2,11 @@ import Layout from "../components/layout";
 
 function Contact() {
   return (
-    <Layout>
-      <h1>Contact</h1>
+    <Layout
+      title={"About"}
+      description={"RC - Web, Randy Caballero, Portfolio, Contact"}
+    >
+      <div>Contact</div>
     </Layout>
   );
 }
