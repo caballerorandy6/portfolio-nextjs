@@ -9,7 +9,7 @@ function Header() {
   //console.log(router);
 
   return (
-    <nav className="flex flex-col justify items-center h-screen w-2/12 bg-neutral-800">
+    <nav className="flex flex-col justify items-center h-screen overflow-y-scroll w-2/12 bg-neutral-800">
       <div className="flex flex-col items-center mt-28">
         <Link href="/">
           <Image
@@ -20,7 +20,10 @@ function Header() {
             alt="logo image"
           />
         </Link>
-        <TypewriterReact />
+        <h1 className="p-1 text-white text-2xl uppercase">Randy Caballero</h1>
+        <div className="mb-8">
+          <TypewriterReact />
+        </div>
       </div>
 
       <div className="flex flex-col w-full items-end">

@@ -102,99 +102,99 @@ function About() {
             <div className="flex gap-4 justify-center mt-10">
               <Image
                 src="/skills/html.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="html image"
                 priority
               />
               <Image
                 src="/skills/css.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="css image"
                 priority
               />
               <Image
                 src="/skills/sass.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="sass image"
                 priority
               />
               <Image
                 src="/skills/tailwind.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="tailwind image"
                 priority
               />
               <Image
                 src="/skills/javascript.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="javascript image"
                 priority
               />
               <Image
                 src="/skills/react.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="react image"
                 priority
               />
               <Image
                 src="/skills/sql.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="sql image"
                 priority
               />
               <Image
                 src="/skills/mysql.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="mysql image"
                 priority
               />
               <Image
                 src="/skills/postgre.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="postgre image"
                 priority
               />
               <Image
                 src="/skills/mongo.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="mongo image"
                 priority
               />
               <Image
                 src="/skills/html.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="html image"
                 priority
               />
               <Image
                 src="/skills/java.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="java image"
                 priority
               />
               <Image
                 src="/skills/docker.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="docker image"
                 priority
               />
               <Image
                 src="/skills/aws.png"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 alt="aws image"
                 priority
               />

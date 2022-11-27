@@ -21,7 +21,7 @@ function Index() {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString("FullStack Developer")
+                .typeString("Fullstack Developer")
                 .changeDelay(150)
                 .deleteAll()
                 .typeString("HTML | CSS")
