@@ -3,6 +3,27 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: "100vw",
+    transition: {
+      ease: "easeInOut",
+      duration: 0.5,
+    },
+  },
+};
 
 function Index() {
   const router = useRouter();
@@ -13,7 +34,13 @@ function Index() {
       title={"Home"}
       description={"RC - Web, Randy Caballero, Portfolio, Home"}
     >
-      <div className="flex flex-col place-content-center text-center mx-auto">
+      <motion.div
+        className="flex flex-col place-content-center text-center mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <p className="text-white text-opacity-40 text-7xl">
           {"Hello, I'm Randy Caballero"}
         </p>
@@ -63,7 +90,7 @@ function Index() {
             />
           </Link>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }

@@ -3,6 +3,31 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import Footer from "./footer";
 import TypewriterReact from "./typewriter";
+import { motion } from "framer-motion";
+
+const logoVariants = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      duration: 0.4,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  },
+};
+
+const linkVariants = {
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
+  },
+};
+
+const shadowVariants = {
+  shadow: {
+    textShadow: "0px 0px 5px rgb(220, 220, 0)",
+  },
+};
 
 function Header() {
   const router = useRouter();
@@ -12,25 +37,35 @@ function Header() {
     <nav className="flex flex-col justify items-center h-screen overflow-y-scroll w-2/12 bg-neutral-800">
       <div className="flex flex-col items-center mt-28">
         <Link href="/">
-          <Image
-            className="rounded-full"
-            src="/img/logo.png"
-            width={100}
-            height={100}
-            alt="logo image"
-          />
+          <motion.div variants={logoVariants} whileHover="hover">
+            <Image
+              className="rounded-full"
+              src="/img/logo.png"
+              width={120}
+              height={120}
+              alt="logo image"
+            />
+          </motion.div>
         </Link>
-        <h1 className="p-1 text-white text-2xl uppercase">Randy Caballero</h1>
+        <motion.h1
+          className="p-1 text-white text-2xl uppercase"
+          variants={shadowVariants}
+          initial="shadow"
+        >
+          Randy Caballero
+        </motion.h1>
         <div className="mb-8">
           <TypewriterReact />
         </div>
       </div>
 
       <div className="flex flex-col w-full items-end">
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/" ? "text-white bg-black" : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black p-3 rounded-l-full transition-colors  mb-3 duration-500`}
         >
           <Image
             src="/icons/home.png"
@@ -40,14 +75,16 @@ function Header() {
             priority
           />
           <Link href="/">Home</Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/about"
               ? "text-white bg-black"
               : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors duration-500 mb-3 `}
         >
           <Image
             src="/icons/about.png"
@@ -57,14 +94,16 @@ function Header() {
             priority
           />
           <Link href="/about">About Me</Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/resume"
               ? "text-white bg-black"
               : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors duration-500 mb-3 `}
         >
           <Image
             src="/icons/resume.png"
@@ -74,14 +113,16 @@ function Header() {
             priority
           />
           <Link href="/resume">Resume</Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/portfolio"
               ? "text-white bg-black"
               : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors duration-500 mb-3 `}
         >
           <Image
             src="/icons/portfolio.png"
@@ -91,14 +132,16 @@ function Header() {
             priority
           />
           <Link href="/portfolio">Portfolio</Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/contact"
               ? "text-white bg-black"
               : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors duration-500 mb-3 `}
         >
           <Image
             src="/icons/contact.png"
@@ -108,14 +151,16 @@ function Header() {
             priority
           />
           <Link href="/contact">Contact</Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={linkVariants}
+          whileHover="hover"
           className={`${
             router.pathname === "/appointments"
               ? "text-white bg-black"
               : "text-slate-400"
-          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors delay-150 mb-3 `}
+          } flex items-center gap-2 w-10/12 font-bold hover:text-white hover:bg-black  p-3 rounded-l-full transition-colors duration-500 mb-3 `}
         >
           <Image
             src="/icons/appointments.png"
@@ -125,7 +170,7 @@ function Header() {
             priority
           />
           <Link href="/appointments">Appointments</Link>
-        </div>
+        </motion.div>
       </div>
 
       <Footer />

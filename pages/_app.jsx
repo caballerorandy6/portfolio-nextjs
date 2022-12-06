@@ -12,14 +12,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return readyPage ? (
-    <AnimatePresence exitBeforeEnter>
-      <motion.div
-        key={router.route}
-        initial={{ width: 0 }}
-        animate={{ width: "100%" }}
-        exit={{ x: window.innerWidth }}
-        transition={{ duration: 0.2, delay: 0.1 }}
-      >
+    <AnimatePresence mode="wait">
+      <motion.div key={router.route}>
         <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>

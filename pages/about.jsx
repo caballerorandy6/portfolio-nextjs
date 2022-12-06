@@ -1,5 +1,56 @@
 import Layout from "../components/layout";
 import Image from "next/legacy/image";
+import { motion } from "framer-motion";
+
+const headerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { delay: 0.3, duration: 0.8 },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.3 },
+  },
+};
+
+const firstContentVariants = {
+  hidden: {
+    x: "100vw",
+  },
+  visible: {
+    x: 0,
+    transition: { type: "spring", mass: 1.2, damping: 10, delay: 0.5 },
+  },
+  exit: {
+    x: "100vw",
+    transition: { type: "spring", mass: 1.2, damping: 10, delay: 0.5 },
+  },
+};
+
+const secondVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      ease: "easeIn",
+      delay: 0.5,
+      duration: 1.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      ease: "easeOut",
+      delay: 0.3,
+      duration: 0.3,
+    },
+  },
+};
 
 function About() {
   return (
@@ -9,7 +60,13 @@ function About() {
     >
       <div className="w-10/12 h-screen overflow-y-scroll">
         <div className="flex flex-col ">
-          <div className="w-full">
+          <motion.div
+            className="w-full"
+            variants={headerVariants}
+            initial="hidden"
+            animate="visible"
+            exit={"exit"}
+          >
             <div className="flex flex-col ">
               <h1 className="text-white text-center text-3xl font-bold uppercase mb-2 pt-20">
                 About Me
@@ -19,9 +76,15 @@ function About() {
               </p>
               <div className="w-16 content-none mx-auto h-2 bg-blue-300"></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex items-center">
+          <motion.div
+            className="flex items-center"
+            variants={firstContentVariants}
+            initial="hidden"
+            animate="visible"
+            exit={"exit"}
+          >
             <div className="flex flex-col w-8/12 ml-16 mt-20 ">
               <h2 className="text-white text-xl font-bold p-2">
                 Randy Caballero
@@ -70,7 +133,7 @@ function About() {
                     priority
                   />
                   <div>
-                    <p className="text-white font-bold">300+ Projects</p>
+                    <p className="text-white font-bold">20+ Projects</p>
                     <p className="text-opacity-50 text-white text-sm">
                       Completed
                     </p>
@@ -85,7 +148,7 @@ function About() {
                     priority
                   />
                   <div>
-                    <p className="text-white font-bold">20+ Meetings</p>
+                    <p className="text-white font-bold">50+ Meetings</p>
                     <p className="text-opacity-50 text-white text-sm">
                       Successful
                     </p>
@@ -93,9 +156,15 @@ function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="w-11/12 mt-20 bg-neutral-900 p-10 shadow-md mx-auto mb-8">
+        <motion.div
+          className="w-11/12 mt-20 bg-neutral-900 p-10 shadow-md mx-auto mb-8 bg-opacity-70"
+          variants={secondVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <div className=" text-center">
             <h1 className="text-3xl text-white mb-4">My Skills</h1>
             <div className="w-16 content-none mx-auto h-2 bg-blue-300"></div>
@@ -246,7 +315,7 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Layout>
   );
